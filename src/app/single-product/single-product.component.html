@@ -1,0 +1,96 @@
+<app-nav></app-nav>
+
+<div id="page">
+
+    <div id="body" class="home">
+
+        <!-- products -->
+
+        <div class="row" *ngIf='product' >
+            <div class="col-xl-5 col-lg-5 col-md-6">
+                <div id="carousel-example-1" class="single-product-slider carousel slide" data-ride="carousel">
+                    <img class="d-block w-100 img-fluid" src="assets/images/{{product.image}}" alt="" />
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-6" >
+                <div class="single-product-details">
+                    <h2> {{product.productName}} </h2>
+                    <h5> {{product.price}} INR </h5>
+                    <p class="available-stock"><span> More than 20 available / <a href="#">8 sold </a></span><p>
+                    <h4>Short Description:</h4>
+                    <p> {{product.description}} </p>
+                    <ul>
+                        <li>
+                            <div class="form-group quantity-box">
+                                <label class="control-label">Please select Quantity</label>
+                                <input class="form-control" [(ngModel)]='qty' min="1" max="20" type="number">
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="price-box-bar">
+                        <div class="cart-and-bay-btn">
+                            <a class="btn hvr-hover" data-fancybox-close="" routerLink='/buy/{{product._id}}/{{qty}}'>Buy Now</a>
+                            <a class="btn hvr-hover" data-fancybox-close="" href="#">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="add-to-btn">
+                        <div class="add-comp">
+                            <a class="btn hvr-hover" *ngIf='auth.loggedIn()' routerLink='/update/{{product._id}}'><i class="fas fa-heart"></i> Edit </a>
+                            <a class="btn hvr-hover" *ngIf='auth.loggedIn()' (click)='delete()'><i class="fas fa-sync-alt"></i> Delete </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- products end -->
+
+        <div class="body">
+            <div>
+                <div>
+                    <h1> Kalyaa </h1>
+                    <h2> The Real quality of home-grown spices </h2>
+                    <p> Find our differents products here and also don't hesitate to order.</p>
+                </div>
+                <img src="assets/images/spices.jpg" style="height: 16em;" alt="image">
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#" class="product"></a>
+                        <h1>PRODUCTS</h1>
+                    </li>
+                    <li>
+                        <a href="#" class="about"></a>
+                        <h1>OUR STORY</h1>
+                    </li>
+                    <li>
+                        <a href="#" class="flavor"></a>
+                        <h1>FLAVORS</h1>
+                    </li>
+                    <li>
+                        <a href="#" class="contact"></a>
+                        <h1>OUR LOCATION</h1>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <div class="connect">
+                <a href="#" class="facebook">facebook</a>
+                <a href="#" class="twitter">twitter</a>
+                <a href="#" class="googleplus">googleplus</a>
+                <a href="#" class="pinterest">pinterest</a>
+            </div>
+            <p>&copy; 2023 Freeeze. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+

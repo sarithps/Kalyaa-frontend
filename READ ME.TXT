@@ -1,0 +1,7 @@
+Mean stack e-commerce website for selling home-made spices.
+
+When a normal user (client) login , he/she can view the products and order products. 
+This order will be saved in database.
+
+When admin (username: admin, password:admin) login , he will get full products, order details.
+He can also add , edit and delete products.

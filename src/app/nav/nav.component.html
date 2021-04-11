@@ -1,0 +1,22 @@
+<div id="header">
+    <div>
+        <a href="#" class="logo"><img style="width: 8em;" src="assets/images/kalyaa_logo.jpeg" alt="logo"></a>
+        <ul id="navigation">
+            <li class="menu">
+                <a routerLink='/products'> Products </a>
+            </li>
+            <li class="menu">
+                <a routerLink='/addproduct' *ngIf='auth.loggedIn()' > Add Product </a>
+            </li>
+            <li class="menu">
+                <a routerLink='/orders' *ngIf='auth.loggedIn()' > Orders </a>
+            </li>
+            <li class="menu">
+                <a routerLink='/contact'> Contact Us </a>
+            </li>
+            <li class="menu">
+                <a (click)='logout()'>  Logout </a>
+            </li>
+        </ul>
+    </div>
+</div>

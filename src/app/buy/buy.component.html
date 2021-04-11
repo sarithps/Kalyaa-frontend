@@ -1,0 +1,79 @@
+<app-nav></app-nav>
+
+<div id="page">
+
+    <div id="body" class="home">
+
+        <!-- forms -->
+        <form *ngIf='product' (ngSubmit)='order()' >
+            <div class="form-group">
+              <input type="text" class="form-control" name="name" disabled id="formGroupExampleInput" value="{{product.productName}}">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="qty" disabled id="formGroupExampleInput2" value="{{qty}}">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="price" disabled id="formGroupExampleInput" value="{{qty}} * {{product.price}} INR">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput"> Name </label>
+                <input type="text" class="form-control" name="uName" [(ngModel)]='orderItem.name'  id="formGroupExampleInput" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput"> Address </label>
+                <input type="text" class="form-control" name="price" [(ngModel)]='orderItem.address' id="formGroupExampleInput" placeholder="address">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput"> PIN code </label>
+                <input type="text" class="form-control" name="starRating" [(ngModel)]='orderItem.pin'  id="formGroupExampleInput" placeholder="pin code">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput"> Mobile number </label>
+                <input type="text" class="form-control" name="starRating" [(ngModel)]='orderItem.mobile'  id="formGroupExampleInput" placeholder="mobile number">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" >
+            </div>
+
+          </form>
+          <!-- forms ends -->
+
+        <div class="footer">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#" class="product"></a>
+                        <h1>PRODUCTS</h1>
+                    </li>
+                    <li>
+                        <a href="#" class="about"></a>
+                        <h1>OUR STORY</h1>
+                    </li>
+                    <li>
+                        <a href="#" class="flavor"></a>
+                        <h1>FLAVORS</h1>
+                    </li>
+                    <li>
+                        <a href="#" class="contact"></a>
+                        <h1>OUR LOCATION</h1>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <div class="connect">
+                <a href="#" class="facebook">facebook</a>
+                <a href="#" class="twitter">twitter</a>
+                <a href="#" class="googleplus">googleplus</a>
+                <a href="#" class="pinterest">pinterest</a>
+            </div>
+            <p>&copy; 2023 Freeeze. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
